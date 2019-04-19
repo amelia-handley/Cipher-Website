@@ -5,8 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-var messageRouter = require('./routes/messages');
+var mailRouter = require('./routes/mail');
 var usersRouter = require('./routes/users');
+//var inboxRouter = require('./routes/inbox');
 
 var app = express();
 
@@ -16,6 +17,7 @@ mongoose.connect(
     useNewUrlParser: true 
   }
 );
+mongoose.Promise = global.Promise;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,8 +30,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes which handle requests
-app.use('/messages', messageRouter);
+app.use('/mail', mailRouter);
 app.use('/users', usersRouter);
+//app.use('/inbox', inboxRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

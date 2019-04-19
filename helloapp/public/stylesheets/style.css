@@ -1,8 +1,63 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+textarea{
+	border:5px solid #FFFFFF;
+	width:50%;
+	margin:5px 0;
+	background-color:white;
 }
-
-a {
-  color: #00B7FF;
+body 
+{
+	background-color:#4B0082;
+	font-family: Calibri (Body);
+}
+b:link {
+    color: yellow;
+}
+h1
+{
+	font-family: Impact, Charcoal, sans-serif;
+	color:white;
+	font-size:5vw;
+}
+h2
+{
+	font-family: Calibri;
+	color:white;
+	top: -5%;
+}
+p
+{
+	margin: auto;
+	width: 50%;
+	color: white;
+	top:-10;
+	text-align: center;
+	font-size: 2.5vw;
+}
+.buttons
+{
+	margin-top: 10px;
+}
+.button 
+{
+	box-shadow: 0px 0px 0px 2px #ed6b34;
+	background-color: white;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#0f0f0f;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #9c3fe2;
+}
+.button:hover {
+	background-color:#476e9e;
+}
+.button:active {
+	position:relative;
+	top:1px;
 }

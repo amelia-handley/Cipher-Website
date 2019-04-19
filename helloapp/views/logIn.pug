@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    center
+      h1 Log In
+    form(action='/users/login', method='POST')
+      p 
+        | username:
+        input(name='userName', value='', type='json')
+        br
+        | password:
+        input(name='userPassword', value='', type='password')
+      center
+        br
+        input(type='submit', value='Submit')

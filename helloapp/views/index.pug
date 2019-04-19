@@ -1,5 +1,25 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+div
+  head
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+    title= title  
+  h1
+    center  CIPHER ENCODER AND MESSENGER
+  div
+    p
+      a(href='https://en.wikipedia.org/wiki/Cipher' style="color: #cc0000") Ciphers
+      |  have been used throughout history to prevent most people from understanding contents of personal or secret messages.
+      br
+  h2
+    center
+      | To  start sending your own Secret Cipher Messages 
+      br
+      | Register or log in to an account below
+  div
+   br
+   center
+     form(action ='/users/signup', method = 'GET')
+       a.button(href="users/signup") Create your account
+     br
+     form(action = '/users/login', method = 'GET')
+       a.button(href="users/login") Log in to your account
