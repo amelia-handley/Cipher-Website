@@ -35,7 +35,7 @@ router.get('/inbox', function(req, res, next) {
 					}
 				})
 		};
-		res.render('send/' + user[0]._id);
+		res.render('/send/' + user[0]._id);
 	})
 	.catch(err => {
 		console.log(err);
