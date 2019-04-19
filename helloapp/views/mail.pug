@@ -3,16 +3,16 @@ extends layout
 block content
     center
      h1 User Homepage
-     title= title
+     title= Homepage
      p
        | You can either view or create your own messages from this page.
        br
        br
      form(action ='/send', method = 'GET')
-       a.button(href="/send") Send a Message 
+       a.button(href="/mail/send") Send a Message 
      br 
      form(action ='/inbox', method = 'GET')
-       a.button(href="/inbox") View your Inbox
+       a.button(href="/mail/inbox") View your Inbox
         
 
     

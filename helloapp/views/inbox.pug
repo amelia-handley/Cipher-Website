@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    center
+     h1 Inbox
+     title= title
+     form(action='/mail/inbox', method='GET')
+     form(action ='/send', method = 'GET')
+       a.button(href="/mail/send") Send a Message 

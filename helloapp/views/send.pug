@@ -3,3 +3,22 @@ extends layout
 block content
     center
       h1 Send Messages
+      title= title
+    form(action='/mail/send', method='POST')
+      p
+        | User Name
+        input(name='userName',  value='', type='json')
+        br
+        | Recipient Name:
+        input(name='recipientName', value='', type='json')
+        br
+        | Contents:
+        input(name='contents',  value='', type='json')
+        br
+        input(type='submit', value='Send')
+        br
+        br
+        br
+        br
+        form(action ='/inbox', method = 'GET')
+           a.button(href="/mail/inbox") View your Inbox

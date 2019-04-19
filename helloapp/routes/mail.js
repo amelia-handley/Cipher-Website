@@ -14,12 +14,12 @@ router.get('/send', function(req,res,next){
 	res.render('send', {title: 'Send Mail'});
 });
 
-router.get('inbox', function(req,res,next){
+router.get('/inbox', function(req,res,next){
 	res.render('inbox', {title: 'Inbox'});
 });
 
 
-// Handling GET requests to /mail
+// Handling GET requests to /inbox
 router.get('/inbox', function(req, res, next) {
 	Mail.find(req.params.userName)
 	.select('userName recipientName contents _id ')
@@ -35,7 +35,7 @@ router.get('/inbox', function(req, res, next) {
 					}
 				})
 		};
-		res.render('/send/' + user[0]._id);
+		res.render('recipientName');
 	})
 	.catch(err => {
 		console.log(err);
@@ -58,7 +58,7 @@ router.post('/send', function(req, res, next) {
 		console.log(result)
 	})
 	.catch(err => console.log(err));
-		res.redirect('/mail')
+		res.redirect('/mail/inbox')
 	
 });
 
@@ -70,18 +70,14 @@ router.get('/:id', function(req, res, next) {
 	})
 });
 
-/*
+
 router.delete('/:mailId', function(req, res, next) {
 	const id = req.params.messagesId
 	Mail.remove({_id:id})
 		.exec()
 		.then(result => {
 			res.status(200).json({
-				message: 'Mail deleted',
-				request: {
-					type: 'POST',
-					url: 'http://localhost:5000/mail'
-				}
+				message: 'Mail deleted'
 			})
 		})	
 	res.status(200).json({
@@ -89,6 +85,6 @@ router.delete('/:mailId', function(req, res, next) {
 			mailId: req.params.mailId,
 		});
 	});
-*/
+
 
 module.exports = router;
