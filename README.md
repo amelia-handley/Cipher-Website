@@ -1,6 +1,7 @@
-# handley_amelia_008101_coursework2
+# Cipher Game Website
 Web Tech Coursework 2
 Author: Amelia Handley (40326169)
+Module: Web Technologies SET09103
 Last Update: 19/04/2019 14:30
 
 To run the Cipher Website you must 
